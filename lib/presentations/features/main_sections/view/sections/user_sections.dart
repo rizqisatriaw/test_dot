@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_dot/config/themes/color_theme.dart';
 import 'package:test_dot/presentations/widgets/custom_circle_avatar.dart';
 import 'package:test_dot/presentations/widgets/custom_text.dart';
+import 'package:test_dot/presentations/widgets/custom_text_icon.dart';
 
 import '../../controller/main_section_controller.dart';
 
@@ -43,24 +44,21 @@ class UserSections extends StatelessWidget {
                   SizedBox(height: 8.h),
 
                   /// full name
-                  CustomText(
+                  CustomTextIcon(
+                    icon: Icons.person,
                     title: controller.user?.value.fullname ?? '',
-                    size: 22.sp,
-                    weight: FontWeight.normal,
                   ),
 
                   /// email
-                  CustomText(
+                  CustomTextIcon(
+                    icon: Icons.email,
                     title: controller.user?.value.email ?? '',
-                    size: 22.sp,
-                    weight: FontWeight.normal,
                   ),
 
                   /// phone
-                  CustomText(
+                  CustomTextIcon(
+                    icon: Icons.phone,
                     title: controller.user?.value.phone ?? '',
-                    size: 22.sp,
-                    weight: FontWeight.normal,
                   ),
                 ],
               ),
