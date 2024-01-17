@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:test_dot/config/routes/main_route.dart';
 import 'package:test_dot/config/themes/color_theme.dart';
 import 'package:test_dot/presentations/widgets/custom_button.dart';
 import 'package:test_dot/presentations/widgets/custom_text_field.dart';

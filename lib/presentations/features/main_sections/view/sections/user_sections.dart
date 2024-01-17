@@ -18,6 +18,7 @@ class UserSections extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          /// avatar
           CustomCirclerAvatar(
             avatar: controller.user?.value.avatar ?? '',
           ),
@@ -33,21 +34,38 @@ class UserSections extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
+                  /// username
                   CustomText(
                     title: controller.user?.value.username ?? '',
                     size: 28.sp,
                     weight: FontWeight.bold,
                   ),
                   SizedBox(height: 8.h),
+
+                  /// full name
                   CustomText(
                     title: controller.user?.value.fullname ?? '',
+                    size: 22.sp,
+                    weight: FontWeight.normal,
+                  ),
+
+                  /// email
+                  CustomText(
+                    title: controller.user?.value.email ?? '',
+                    size: 22.sp,
+                    weight: FontWeight.normal,
+                  ),
+
+                  /// phone
+                  CustomText(
+                    title: controller.user?.value.phone ?? '',
                     size: 22.sp,
                     weight: FontWeight.normal,
                   ),
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );
