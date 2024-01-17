@@ -8,7 +8,7 @@ String userResponseToJson(UserResponse data) => json.encode(data.toJson());
 class UserResponse {
   final int? statusCode;
   final String? message;
-  final Data? data;
+  final User? data;
 
   UserResponse({
     this.statusCode,
@@ -19,7 +19,7 @@ class UserResponse {
   factory UserResponse.fromJson(Map<String, dynamic> json) => UserResponse(
         statusCode: json["status_code"],
         message: json["message"],
-        data: json["data"] == null ? null : Data.fromJson(json["data"]),
+        data: json["data"] == null ? null : User.fromJson(json["data"]),
       );
 
   Map<String, dynamic> toJson() => {
@@ -29,7 +29,7 @@ class UserResponse {
       };
 }
 
-class Data {
+class User {
   final int? id;
   final String? username;
   final String? fullname;
@@ -37,7 +37,7 @@ class Data {
   final String? phone;
   final String? avatar;
 
-  Data({
+  User({
     this.id,
     this.username,
     this.fullname,
@@ -46,7 +46,7 @@ class Data {
     this.avatar,
   });
 
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
+  factory User.fromJson(Map<String, dynamic> json) => User(
         id: json["id"],
         username: json["username"],
         fullname: json["fullname"],

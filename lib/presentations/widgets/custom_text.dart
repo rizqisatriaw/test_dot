@@ -9,17 +9,20 @@ class CustomText extends StatelessWidget {
     required this.size,
     this.colorText,
     this.weight,
+    this.maxLine,
   }) : super(key: key);
 
   final String title;
   final double size;
   final FontWeight? weight;
   final Color? colorText;
+  final int? maxLine;
 
   @override
   Widget build(BuildContext context) {
     return Text(
       title,
+      maxLines: maxLine ?? 1,
       style: GoogleFonts.poppins(
         textStyle: TextStyle(
           fontSize: size,

@@ -45,11 +45,12 @@ class GallerySection extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 8.h),
                   shrinkWrap: true,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
+                    crossAxisCount: 2,
                     crossAxisSpacing: 8.w,
                     mainAxisSpacing: 8.w,
                   ),
                   itemCount: controller.contentLocalGallery.length,
+                  physics: const BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     final item = controller.contentLocalGallery[index];
                     return CustomItemGallery(

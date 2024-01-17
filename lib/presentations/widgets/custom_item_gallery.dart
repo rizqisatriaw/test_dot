@@ -38,13 +38,17 @@ class CustomItemGallery extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.r),
                     ),
-                    child: Image.network(thumbnail),
+                    child: Image.network(
+                      thumbnail,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
                 Center(
                   child: Padding(
                     padding: EdgeInsets.symmetric(vertical: 4.h),
                     child: CustomText(
+                      maxLine: 2,
                       title: caption.capitalize ?? '',
                       size: 18.sp,
                     ),
